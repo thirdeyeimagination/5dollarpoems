@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order a Handwritten Poem</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🖋️ Order a Handwritten Poem</h1>
+    <p class="intro">Every poem is crafted by hand and mailed to you — introspective, raw, and thoughtful. Just $5 each.</p>
+
+    <div class="poems">
+      <h2>Sample Works</h2>
+      <div class="sample">
+        <p>Welcome to tomorrow<br>Where the sun will still shine<br>Happiness or sorrow<br>Follow the divine</p>
+        <p>In silence, the stars hum low<br>Secrets only night will know</p>
+        <p>Your name in ink, a feathered sigh<br>A poem to kiss the reasons why</p>
+      </div>
+    </div>
+
+    <div class="options">
+      <h2>Purchase</h2>
+      <div class="buttons">
+        <a href="https://www.paypal.com/ncp/payment/DZXLTCGKG5MUY" class="btn" target="_blank">Buy Now – $5</a>
+      </div>
+    </div>
+
+    <div class="form">
+      <h2>Mailing Info</h2>
+      <form name="poem-order-form" method="POST" data-netlify="true" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="poem-order-form" />
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="text" name="address" placeholder="Mailing Address" required />
+        <input type="email" name="email" placeholder="Email (optional)" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Hidden form for Netlify build detection -->
+  <form name="poem-order-form" netlify hidden>
+    <input type="text" name="name" />
+    <input type="text" name="address" />
+    <input type="email" name="email" />
+  </form>
+</body>
+</html>
